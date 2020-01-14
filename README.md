@@ -1,5 +1,5 @@
 # splinter_ck_scraper
-I wrote a scraper that uses splinter, an abstraction layer for selenium to scrape data.
+I wrote a scraper that uses splinter(an abstraction layer for selenium) and BeatifulSoup to scrape web data.
 
 
 ## background
