@@ -4,12 +4,17 @@ import urllib.request
 from bs4 import BeautifulSoup as b
 
 
+# sets up an html soup parser for some URL
+"""
 html = urllib.request.urlopen(url).read()
 soup = b(html, 'html.parser')
+"""
 cardsDb = sqlite3.connect('CARDINFO.db')
 c = cardsDb.cursor()
 
-# sql collect info, adds to cList
+
+
+# SQL search for all mythics and rares, and outputs them in a list called cList
 cList = []
 try:
     # connects db, fills cList with ALL mythics and rares
@@ -19,9 +24,15 @@ try:
         cList.append(innerList)
 except:
     print('could not write sql function')
-#or x in cList:
-#    print(x)
+"""
+for x in cList:
+    print(x)
+"""
+
 cardsDb.close()
+
+
+
 
 def selectRows(cList):
     # converts cList into 500 long chunks, then returns that chunk as popList and passes it to pasteHtml
