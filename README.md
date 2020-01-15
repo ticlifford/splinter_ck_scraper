@@ -12,3 +12,6 @@ Cardkingdom doesn't have an API to collect pricing data with. However, they have
 First, I compile a list of my cards(tens of thousands of card objects) into 500 card chunks. Then, I use splinter, a front-end for the selenium web automation tool(it's commonly used to test websites). I create a desktop instance of chrome and upload my 500 card list, then scrape the prices with BeautifulSoup.
 ![test_image](test_scrape.png)
 Here it's automatically pasting the 500 card list into a chrome browser it opened
+
+### to-do:
+This is currently a work in progress. I've got to the point where I have the results, and I just need to scrape them. I plan to do this with Beautifulsoup, and I have that set up. I'm going to scrape the values, then write them to a db.
